@@ -175,6 +175,7 @@
       position: relative;
       min-height: 320px;
       background: #0f1828;
+      margin: 0;
       overflow: hidden;
     }
 
@@ -195,6 +196,18 @@
       height: 44%;
       background: linear-gradient(to top, rgba(8, 11, 16, 0.48), transparent);
       pointer-events: none;
+    }
+
+    .photo-credit {
+      position: absolute;
+      left: 0.9rem;
+      bottom: 0.75rem;
+      z-index: 1;
+      margin: 0;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: rgba(235, 242, 252, 0.9);
+      text-transform: none;
     }
 
     .facts {
@@ -382,6 +395,7 @@
       </div>
       <figure class="hero-image">
         <img src="img/belu-portrait.jpg" alt="Portrait of Belu-Simion Fainaru" />
+        <figcaption class="photo-credit">photo: FLORIN STEFAN</figcaption>
       </figure>
     </section>
 
