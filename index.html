@@ -264,13 +264,25 @@
     }
 
     .creator-note {
-      margin: 0.65rem auto 0;
+      margin: 0.45rem 0 0;
       color: #9eb1cf;
-      font-size: 0.95rem;
+      font-size: 0.8rem;
       letter-spacing: 0.03em;
-      line-height: 1.45;
-      max-width: 52rem;
-      text-align: center;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .creator-line {
+      display: block;
+    }
+
+    .creator-extra {
+      display: block;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transform: translateY(-4px);
+      transition: max-height 220ms ease, opacity 180ms ease, transform 220ms ease;
     }
 
     .creator-note a {
@@ -282,6 +294,23 @@
     .creator-note a:hover {
       color: #b7d0f7;
       border-bottom-color: rgba(183, 208, 247, 0.9);
+    }
+
+    @media (hover: hover) {
+      .creator-note:hover .creator-extra,
+      .creator-note:focus-within .creator-extra {
+        max-height: 3.2rem;
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (hover: none) {
+      .creator-extra {
+        max-height: 3.2rem;
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @keyframes rise {
@@ -440,9 +469,13 @@
     </section>
 
     <p class="creator-note">
-      Developed by <a href="https://boazkaizman.com/" target="_blank" rel="noopener noreferrer">Boaz Kaizman</a>
-      in collaboration with the Creative Coding Collective for
-      <a href="https://sideground.de/heritageSynagogueStommeln/index-en.html" target="_blank" rel="noopener noreferrer">Stommeln Synagogue - Reviving Jewish Heritage</a>.
+      <span class="creator-line">
+        Developed by <a href="https://boazkaizman.com/" target="_blank" rel="noopener noreferrer">Boaz Kaizman</a>
+      </span>
+      <span class="creator-extra">
+        with the Creative Coding Collective for
+        <a href="https://sideground.de/heritageSynagogueStommeln/index-en.html" target="_blank" rel="noopener noreferrer">Stommeln Synagogue - Reviving Jewish Heritage</a>.
+      </span>
     </p>
   </main>
 
